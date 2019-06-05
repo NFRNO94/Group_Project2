@@ -1,6 +1,6 @@
 let orm = require("../config/orm.js");
 
-let reservation = {
+let reservations = {
     all: function (cb) {
         orm.all("reservations", function (res) {
             cb(res);
@@ -23,4 +23,4 @@ let reservation = {
     }
 };
 
-module.exports = reservation;
+module.exports = reservations;
