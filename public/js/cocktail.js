@@ -63,7 +63,7 @@ let cocktailObj = {
 
         let imgUrl = cocktailImg;
         let imgPage = $("<img>");
-        imgPage.addClass("text-center img-fluid");
+        imgPage.addClass("text-center img-fluid cocktail-img");
         imgPage.attr("src", imgUrl);
         imgPage.attr("id", "drinkPic");
         $("#cocktails").prepend(imgPage);

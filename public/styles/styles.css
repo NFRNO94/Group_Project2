@@ -2,6 +2,10 @@
   line-height: 2.5;
 }
 
+.cocktail-img {
+  object-fit: contain;
+}
+
 h1, 
 h2,
 label {
@@ -26,6 +30,7 @@ body {
   background-color: black;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
 }
 
 .vertical-center {
