@@ -1,5 +1,6 @@
 let hookahFlavors = require("../models/hookah_flavors.js");
 let reservations = require("../models/tables.js");
+let waitlist = require("../models/waitlist.js");
 
 module.exports = function (app) {
   // Load index page
@@ -27,15 +28,17 @@ module.exports = function (app) {
   app.get("/manager", function (req, res) {
 
     reservations.all(function (data) {
+      waitlist.all(function (data2) {
 
-      let hbsObject = {
+        let hbsObject = {
 
-        reservationsList: data
-      };
-      // console.log(hbsObject);
-      res.render("manager", hbsObject);
+          reservationsList: data,
+          waitlist: data2
+        };
+        console.log(hbsObject);
+        res.render("manager", hbsObject);
+      });
     });
-
 
   });
 
